@@ -29,12 +29,18 @@ export class PopupService {
                 this.$controller(config.controller, _.assign({
                     $scope: scope
                 }, resolvedData));
+                //var ctrl = $controller('MyDirectiveController', { /* no locals */ }, { name: 'Clark Kent' });
                 var element = angular.element(realTemplate);
                 this.$compile(element)(scope);
+
+                scope.close = (data)=> {
+                    defer.resolve(data);
+                    scope.$destroy();
+                    element.remove();
+                };
                 angular.element(this.$document[0].body).append(element);
             });
         });
-        alert(1);
         return defer.promise;
     }
 }

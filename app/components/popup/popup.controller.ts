@@ -9,14 +9,16 @@ class Controller implements IController {
     dataForm:{};
     a:string;
     //action:string;
-    constructor(private $timeout:ng.ITimeoutService, public Popup) {
+    constructor(private $timeout:ng.ITimeoutService, public Popup, private $scope) {
         "ngInject";
     }
 
     open() {
         this.Popup.open({
-            template: "<div>Hello world</div>",
-            controller: ()=> {
+            template: "<div>Hello<button ng-click='close(1)'>1</button><button ng-click='close(2)'>2</button></div>",
+            //controllerAs:"vm",
+            controller: ($scope)=> {
+                $scope.aaa = 'bbb';
             },
             resolve: {
                 testResolve: ($q)=> {
