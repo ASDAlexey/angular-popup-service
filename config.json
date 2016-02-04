@@ -15,7 +15,9 @@
     },
     "vendors": {
       "angular": "bower_components/angular/angular.min.js",
-      "angularUiRouter": "bower_components/angular-ui-router/release/angular-ui-router.min.js"
+      "angularUiRouter": "bower_components/angular-ui-router/release/angular-ui-router.min.js",
+      "lodash": "bower_components/lodash/dist/lodash.min.js",
+      "jquery": "bower_components/jquery/dist/jquery.min.js"
     },
     "project": {
       "title": "JellyChip"

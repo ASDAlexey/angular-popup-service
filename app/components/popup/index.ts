@@ -7,8 +7,8 @@ export default angular
     /*.directive("popup", ($timeout) => {
      return new Welcome($timeout);
      })*/
-    .service("Popup", ($q, $injector) => {
-        return new PopupService($q, $injector);
+    .service("Popup", ($q, $injector,$templateCache,$templateRequest,$rootScope,$controller,$compile,$document) => {
+        return new PopupService($q, $injector,$templateCache,$templateRequest,$rootScope,$controller,$compile,$document);
     })
     .config(routesConfig)
     .name;
