@@ -18,7 +18,7 @@ export class Welcome implements ng.IDirective {
         count: "@"
     };
     public controller:Function = WelcomeDirectiveCtrl;
-    public controllerAs:string = 'vmD';
+    public controllerAs:string = 'vm';
     public bindToController:boolean = true;
     link:ng.IDirectiveLinkFn = (scope:ng.IScope, element:ng.IAugmentedJQuery, attrs:ng.IAttributes, ctrls, transludeFn) => {
         this.$timeout(()=> {

@@ -1,2 +1,4 @@
-div popup {{vmD.count}}
+div popup {{vm.count}}
     button(ng-click="vm.open()") open
+    address-list(items="vm.listItems" action="vm.open(item)")
+        | awesome thing {{vm.count}}

@@ -1,6 +1,7 @@
 // Features components
 import welcome from '../welcome/index.ts';
 import popup from '../popup/index.ts';
+import addressList from '../address-list/index.ts';
 
 angular.module('app.core', [
     'ui.router',
@@ -10,7 +11,8 @@ angular.module('app.core', [
 
     // Features components
     welcome,
-    popup
+    popup,
+    addressList
 
     // 3rd Party components
     //'ui.router'

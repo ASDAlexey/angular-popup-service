@@ -1,16 +1,30 @@
 declare var angular:any;
+export interface IItem {
+    title:string;
+}
 interface IController {
-    //form_set_dirty(form:{}):void;
-    //action:string;
-    dataForm:{}
-    a:string
+    listItems:IItem[];
+    count:number
 }
 class Controller implements IController {
-    dataForm:{};
-    a:string;
-    //action:string;
-    constructor(private $timeout:ng.ITimeoutService, public Popup, private $scope) {
+    count:number;
+    listItems:IItem[];
+
+    constructor(private $timeout:ng.ITimeoutService,
+                public Popup) {
         "ngInject";
+        this.count = 14;
+        this.listItems = [
+            {
+                "title": "Title 1"
+            },
+            {
+                "title": "Title 2"
+            },
+            {
+                "title": "Title 3"
+            }
+        ];
     }
 
     open() {

@@ -1,3 +1,4 @@
+import './_all.ts';
 import './components/core/index.ts';
 angular.module('app', [
     "app.core"

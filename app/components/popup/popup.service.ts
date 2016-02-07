@@ -29,7 +29,6 @@ export class PopupService {
                 this.$controller(config.controller, _.assign({
                     $scope: scope
                 }, resolvedData));
-                //var ctrl = $controller('MyDirectiveController', { /* no locals */ }, { name: 'Clark Kent' });
                 var element = angular.element(realTemplate);
                 this.$compile(element)(scope);
 
